@@ -1,0 +1,25 @@
+{
+	"$schema" : "https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/schema/library.json",
+	"name": "LibraryTemplate",
+	"version": "0.0.0",
+	"description": "",
+	"keywords": "template, arduino, cpp",
+	"repository":
+	{
+		"type": "git",
+		"url": "https://github.com/thirstyice/"
+	},
+	"authors":
+	[
+		{
+			"name": "Tauran",
+			"email": "tauranwood@gmail.com",
+			"maintainer": true
+		}
+	],
+	"license": "GPL-3.0-or-later",
+	"dependencies": {
+	},
+	"frameworks": "arduino",
+	"platforms": "*"
+}
