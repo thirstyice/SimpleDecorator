@@ -12,20 +12,28 @@
 
 String hugeLogOfEverything = "";
 
-class Logger : Decorator<HardwareSerial> {
+class Logger : public Decorator<Print> {
 	using Decorator::Decorator;
-	size_t write(char c) {
+	size_t write(uint8_t c) {
 		hugeLogOfEverything += c;
 		return pointer->write(c);
 	}
-	size_t write(const char* str, size_t length) {
-		String input = "";
-		if (input.reserve(length+1)) {
-			strlcpy(input.begin(), str, length);
-		}
-		hugeLogOfEverything += input;
-		return pointer->write(str, length);
-	}
 };
 
-Logger Log(Serial);
+Logger Log(&Serial);
+char c = 32; // (' ')
+
+void setup() {
+	Serial.begin(9600);
+}
+
+
+// Log the characters from ' ' to '~'
+void loop() {
+	Log->print((char)c);
+	c++;
+	if (c>=127) {
+		c=32;
+	}
+	delay(500);
+}
