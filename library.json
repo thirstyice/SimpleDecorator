@@ -1,9 +1,9 @@
 {
 	"$schema" : "https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/schema/library.json",
-	"name": "LibraryTemplate",
-	"version": "0.0.0",
-	"description": "",
-	"keywords": "template, arduino, cpp",
+	"name": "SimpleDecorator",
+	"version": "0.1.0",
+	"description": "Simple library to aid in creating decorators",
+	"keywords": "arduino, cpp, oop, template, object-oriented, design. decorator",
 	"repository":
 	{
 		"type": "git",
@@ -20,6 +20,6 @@
 	"license": "GPL-3.0-or-later",
 	"dependencies": {
 	},
-	"frameworks": "arduino",
+	"frameworks": "*",
 	"platforms": "*"
 }
