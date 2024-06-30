@@ -5,8 +5,6 @@
 /**
  * @brief Logger (Decorator example)
  * @details A wrapper for `Serial` that also appends everything to a variable
- * 
- * @note You will probably run out of ram very fast if you actually do this
  */
 
 
@@ -15,12 +13,12 @@ String hugeLogOfEverything = "";
 class Logger : public Decorator<Print> {
 	using Decorator::Decorator;
 	size_t write(uint8_t c) {
-		hugeLogOfEverything += c;
+		hugeLogOfEverything += (char)c;
 		return pointer->write(c);
 	}
 };
 
-Logger Log(&Serial);
+Print* Log = new Logger(&Serial);
 char c = 32; // (' ')
 
 void setup() {
@@ -34,6 +32,9 @@ void loop() {
 	c++;
 	if (c>=127) {
 		c=32;
+		Serial.println("\n=");
+		Serial.println(hugeLogOfEverything);
+		hugeLogOfEverything = "";
 	}
-	delay(500);
+	delay(100);
 }
