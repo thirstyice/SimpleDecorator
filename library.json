@@ -3,7 +3,7 @@
 	"name": "SimpleDecorator",
 	"version": "0.1.0",
 	"description": "Simple library to aid in creating decorators",
-	"keywords": "arduino, cpp, oop, template, object-oriented, design. decorator",
+	"keywords": "arduino, cpp, oop, template, object-oriented, design, decorator",
 	"repository":
 	{
 		"type": "git",

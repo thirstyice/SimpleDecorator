@@ -1,5 +1,7 @@
-# LibraryTemplate
-### A template for a platformio library
+# SimpleDecorator
+### A simple template for a decorator pattern
 ===
 
-For use when creating new libraries for platformio
+Useful in a wide variety of situations, e.g. logging debug output to multiple places
+
+More info: https://en.wikipedia.org/wiki/Decorator_pattern
